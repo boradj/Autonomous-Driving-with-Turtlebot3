@@ -1,7 +1,7 @@
 # team3_deathwing
 
-shresth31sharma@gmail.com
-aayushmjain98@gmail.com
-dppatelrh29@gmail.com
-milind.official98@gmail.com
-boradjaydip.bj@gmail.com
+Shresth Sharma <shresth31sharma@gmail.com>
+Ayush Surana <aayushmjain98@gmail.com>
+Dharmesh Patel <dppatelrh29@gmail.com>
+Milind Milind<milind.official98@gmail.com>
+Jaydip Borad<boradjaydip.bj@gmail.com>
