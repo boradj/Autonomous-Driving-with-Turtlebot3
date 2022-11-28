@@ -1,10 +1,13 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import rospy
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import LaserScan
-import time
+from nav_msgs.msg import Odometry
 
+import tf.transformations as tftr
+import time
+import threading
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -17,6 +20,8 @@ class LaserData():
 
     # constructor 
     def __init__(self, robot_name="turtlebot"):
+        self.lock = threading.Lock()
+        self.flag = True
         rospy.init_node('robot_control_node', anonymous=True)
 
         if robot_name == "summit":
@@ -38,10 +43,24 @@ class LaserData():
             '/scan', LaserScan, self.laser_callback)
         self.summit_laser_subscriber = rospy.Subscriber(
             '/scan', LaserScan, self.summit_laser_callback)
+        self.sub_odom = rospy.Subscriber("/odom", Odometry, self.odometry_callback)
         
         self.ctrl_c = False
         self.rate = rospy.Rate(1)
         rospy.on_shutdown(self.shutdownhook)
+   
+    def odometry_callback(self, msg):
+        self.lock.acquire()
+        # read current robot state
+        self.cur_position = msg.pose.pose.position
+        cur_q = msg.pose.pose.orientation
+        cur_rpy = tftr.euler_from_quaternion((cur_q.x, cur_q.y, cur_q.z, cur_q.w))  # roll pitch yaw
+        self.cur_rot_z = cur_rpy[2]
+
+        if self.flag:
+            self.zero_pose = [self.cur_position.x, self.cur_position.y, self.cur_position.z]
+            self.flag = False
+        self.lock.release()
 
     
     # method to check if the laser is ready 
@@ -86,65 +105,79 @@ class LaserData():
         time.sleep(1)
         return self.laser_msg.ranges
 
-# a function to take angle and radius as input
-# returns cordinates of x and y of obstacles.
-def circle_sections(angle, radius):
-    return radius*math.cos(angle), radius*math.sin(angle)
+    # a function to take angle and radius as input
+    # returns cordinates of x and y of obstacles.
+    def circle_sections(self, angle, radius):
+        return radius*math.cos(angle), radius*math.sin(angle)
 
+    def map(self):
+        # creating empty list for cordinates
+        x = []
+        y = []
+        
+        
+        # instance of class
+        ld = LaserData()
+
+        
+        plt.ion()
+        fig, ax = plt.subplots()
+        ax.set_xlim(-5, 5)
+        ax.set_ylim(-5, 5)
+        sc = ax.scatter(x, y)
+        plt.draw()
+        
+
+        while True:
+                X = []
+                Y = []
+                a = ld.get_laser_full()
+                
+
+                # converting tuple laser output to array
+                a_array = np.asarray(a)
+                
+                
+                
+                for i in range(0, 360):
+                    
+                # removing inf (infinity) values from the arrays
+                    if a_array[i] == inf:
+                        
+                        pass
+
+                    else:
+
+                        r = a_array[i]
+                        
+                    
+                        d2r = (i*np.pi)/180 # degree to radians conversion
+                        
+                        a = d2r + self.cur_rot_z
+
+                        x, y = r*math.cos(a), r*math.sin(a)# getting x and y cordinates of obstacle
+                        c = x + self.cur_position.x
+                        d = y + self.cur_position.y
+                        # appending  cordinate list
+                        X.append(c)
+                        Y.append(d)
+
+                sc.get_offsets()
+
+                # add the points to the plot
+                #plt.plot(self.cur_position.x ,self.cur_position.y, color='red', marker="p", markersize=6)
+                x = np.append(x, X)
+                y = np.append(y, Y)
+                sc.set_offsets(np.c_[x,y])
+                #sc.set_offsets(self.cur_position.x, self.cur_position.y, c=)
+                ax.scatter(self.cur_position.x, self.cur_position.y, c = [0, 1, 0])
+                
+                fig.canvas.draw_idle()
+                plt.pause(0.000001)
+                
 
 
 if __name__ == '__main__':
+    task2 = LaserData()
+    task2.map()
     
-    # creating empty list for cordinates
-    x = []
-    y = []
-    
-    # instance of class
-    ld = LaserData()
-
-    
-    plt.ion()
-    fig, ax = plt.subplots()
-    ax.set_xlim(-5, 5)
-    ax.set_ylim(-5, 5)
-    sc = ax.scatter(x, y)
-    plt.draw()
-    
-    while True:
-            X = []
-            Y = []
-            a = ld.get_laser_full()
-            
-            
-
-            # converting tuple laser output to array
-            a_array = np.asarray(a)
-            
-            
-            
-            for i in range(0, 360):
-                
-            # removing inf (infinity) values from the arrays
-                if a_array[i] == inf:
-                    r=0
-                else:
-                    
-                    r = a_array[i]
-                    
-                
-                d2r = (i*np.pi)/180 # degree to radians conversion
-                
-                x, y = circle_sections(d2r, r) # getting x and y cordinates of obstacle
-                
-                # appending the empty cordinate list
-                X.append(x)
-                Y.append(y)
-            sc.get_offsets()
-
-            # add the points to the plot
-            x = np.append(x, X)
-            y = np.append(y, Y)
-            sc.set_offsets(np.c_[x,y])
-            fig.canvas.draw_idle()
-            plt.pause(1)
-	    	
