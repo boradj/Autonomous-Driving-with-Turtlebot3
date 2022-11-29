@@ -1,7 +1,7 @@
 # TurtleBot3
 ## Team3_Deathwing
 
-<img src="https://raw.githubusercontent.com/THD-autonomous-system/team3_deathwing/main/Images/logo_turtlebot3.png" width="200" height="200">
+<img src="https://raw.githubusercontent.com/THD-autonomous-system/team3_deathwing/main/Images/logo_turtlebot3.png" width="230" height="200">
 
 ### **Members:**
 
