@@ -2,7 +2,7 @@
 
   ## Autorace Map
 
-    ros gazebo package: roslaunch turtlebot3_gazebo turtlebot3_autorace.launch 
+    Ros gazebo package: roslaunch turtlebot3_gazebo turtlebot3_autorace.launch 
     
     Position 1:
   
@@ -16,7 +16,7 @@
   ## Stage 1 Map
    
    
-    ros gazebo package: roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch 
+    Ros gazebo package: roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch 
     
     Position 1:
 
