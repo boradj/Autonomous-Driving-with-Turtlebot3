@@ -2,15 +2,15 @@
 ## Team3_Deathwing
 ### **Members:**
 
-      **Jaydip Borad**:- <boradjaydip.bj@gmail.com>
+     **Jaydip Borad**:- <boradjaydip.bj@gmail.com>
 
-      **Shresth Sharma**:- <shresth31sharma@gmail.com>
+     **Shresth Sharma**:- <shresth31sharma@gmail.com>
 
-      **Ayush Surana**:- <aayushsurana12@gmail.com>
+     **Ayush Surana**:- <aayushsurana12@gmail.com>
 
-      **Dharmesh Patel**:- <dppatelrh29@gmail.com>
+     **Dharmesh Patel**:- <dppatelrh29@gmail.com>
 
-      **Milind Milind**:- <milindchaudhary80@gmail.com>
+     **Milind Milind**:- <milindchaudhary80@gmail.com>
 
 ## Lab 1:
    
