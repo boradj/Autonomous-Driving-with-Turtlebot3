@@ -15,8 +15,9 @@ Milind Milind:- <milindchaudhary80@gmail.com>
 ## Lab 1:
    Task: 
    
-   **Virtual Simulation in Rviz for MAP-HOUSE**
-   **[Simulation of Classroom using Turtlebot3-burger(Realtime)](https://github.com/THD-autonomous-system/team3_deathwing/tree/main/homework_14_November/turtlebot3_classroom_Hoerssal_Sparkasse_mapping)**
+   **(Virtual Simulation in Rviz for MAP-HOUSE)[https://github.com/THD-autonomous-system/team3_deathwing/tree/main/homework_14_November/turtlebot3_classroom_Hoerssal_Sparkasse_mapping]**
+   
+   **(Simulation of Classroom using Turtlebot3-burger(Realtime))[https://github.com/THD-autonomous-system/team3_deathwing/tree/main/homework_14_November/turtlebot3_classroom_Hoerssal_Sparkasse_mapping]**
 
 ## Lab 2:
    Task: To map virtual enviroment using matplotlib
@@ -25,7 +26,7 @@ Milind Milind:- <milindchaudhary80@gmail.com>
    **mapping of stage 1 map**
    
 ## Lab 3:
-   Task: To program a robot to follow walls as it runs** 
+   Task: Implementing walls following robot 
    
   
 
