@@ -10,7 +10,7 @@ Ayush Surana:- <aayushsurana12@gmail.com>
 
 Dharmesh Patel:- <dppatelrh29@gmail.com>
 
-Milind Milind:- <milind.official98@gmail.com>
+Milind Milind:- <milindchaudhary80@gmail.com>
 
 ## Lab 1:
    Task: 
