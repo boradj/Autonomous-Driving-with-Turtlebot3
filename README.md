@@ -31,8 +31,7 @@ Milind Milind:- <milindchaudhary80@gmail.com>
    **Code:-** [Mapping node](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/homework_22_november/laser.py)
    
 ## Lab 3:
-   ### Task: 
-   **Implementing walls following robot** 
+   ### Task: **Implementing walls following robot** 
    
   
 
