@@ -1,5 +1,5 @@
 ### Virtual mapping in Rviz was done for home map
-![Alt text](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab 1/virtual_home_mapping/Screenshot%20from%202022-11-17%2018-51-01.png?raw=true "Title")
+![Alt text](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab%201/virtual_home_mapping/Screenshot%20from%202022-11-17%2018-51-01.png)
 
 ### Classroom mapping was done using Rviz for classroom 
 
