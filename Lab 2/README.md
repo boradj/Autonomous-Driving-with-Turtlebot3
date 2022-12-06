@@ -28,7 +28,7 @@
 
     Position 3:
     
-   ![Alt text](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab 2/Screenshot from 2022-11-28 17-59-01.png)
+   ![Alt text](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab%202/Screenshot%20from%202022-11-28%2017-59-01.png)
 
     Position 4:
    
