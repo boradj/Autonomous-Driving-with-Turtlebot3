@@ -121,6 +121,12 @@ class wallfollower():
         if self.state_ == 0 and self.follow_dir == -1:
 		
             
+            if self.section['front1'] < a and self.section['left1'] < a and self.section['right1'] > b:
+            	self.change_state(6)
+            	time.sleep(3)
+            elif self.section['front1'] < a and self.section['left1'] > a and self.section['right1'] > b:
+            	self.change_state(6)
+            	time.sleep(3)
             if self.section['front1'] > b and self.section['left1'] > b and self.section['right1'] > b:  # Loop 1
                 self.change_state(0)
                 print(self.section['front'])
@@ -136,8 +142,8 @@ class wallfollower():
             #y = self.x + 4.5
             #self.angle = 90
             self.change_state(1)
-            print(rospy.get_time())
-            print(self.section['left1'])
+            #print(rospy.get_time())
+            #print(self.section['left1'])
             if self.section['left1'] < b:#and rospy.get_time() > y and velocity.angular.z == 0 
                 self.change_state(2)
                 y = rospy.get_time() - self.x
@@ -225,7 +231,7 @@ class wallfollower():
             elif self.section['left1'] <= b and self.section['front1'] <= b:
                 self.change_state(1)
                 time.sleep(0.4) 
-            elif self.section['left'] > b and self.section['front'] > b:
+            elif self.section['left'] > 0.8 and self.section['front'] > b:
                 self.change_state(5)            
             elif self.section['left1'] < b and self.section['front1'] > b:
                 self.change_state(3)
@@ -423,6 +429,7 @@ class wallfollower():
     def move_back(self):
         velocity = Twist()
         velocity.linear.x = -0.2
+        velocity.angular.z = 0.3
         return velocity
     
     def move_diag_left(self):
@@ -465,6 +472,7 @@ class wallfollower():
                 velocity = self.move_diag_left()
             elif self.state_ == 6:
                 velocity = self.move_back()
+                time.sleep(2)
             #elif self.state_ == 7:
             else:
                 rospy.logerr('Unknown state!')
