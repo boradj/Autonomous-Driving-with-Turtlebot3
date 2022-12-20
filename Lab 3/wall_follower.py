@@ -76,15 +76,39 @@ class wallfollower():
         self.section = {
                 'front' : min(min(r[0:5]), min(r[355:360])),
                 'front1': r[0],
+                'front2': r[0],
                 'left' : min (r[45:135]),
                 'left1': r[90],
                 'rear' : min(r[135:225]),
                 'right' : min(r[225:315]),
-                'right1': r[270]
+                'right1': r[270],
+                'front2': min(min(r[0:10]), min(r[350:360])),
+                'left2': min(r[10:70]),
+                'right2': min(r[290:350])
+                
         }
 
+        #self.obstacle_avoidance()
         self.bug_action()
 
+
+
+    def obstacle_avoidance(self):
+        thr1 = 0.8 # Laser scan range threshold
+        thr2 = 0.8
+        velocity = Twist()
+        if self.section['front2'] > thr1 and self.section['left2'] > thr2 and self.section['right2'] > thr2: # Checks if there are obstacles in front and
+                                                                            # 15 degrees left and right (Try changing the
+                                        # the angle values as well as the thresholds)
+            velocity.linear.x = 0. # go forward (linear velocity)
+            velocity.angular.z = 0.0 # do not rotate (angular velocity)
+        else:
+            velocity.linear.x = 0.0 # stop
+            velocity.angular.z = 0.5 # rotate counter-clockwise
+        if self.section['front2'] > thr1 and self.section['left2'] > thr2 and self.section['right2'] > thr2:
+                velocity.linear.x = 0.5
+                velocity.angular.z = 0.0
+        self.pub.publish(velocity)
 
     def bug_action(self):    
         b = 1  # maximum threshold distance
@@ -93,8 +117,7 @@ class wallfollower():
         #linear_x = 0  # Odometry message for linear velocity will be called here.
         #angular_z = 0  # Odometry message for angular velocity will be called here.
 
-        rospy.loginfo("follow_direction {f}".format(f=self.follow_dir))  # This will indicate the direction of wall to follow.
-        
+        rospy.loginfo("follow_direction {f}".format(f=self.follow_dir))  # This will indicate the direction of wall to follow.        
         if self.state_ == 0 and self.follow_dir == -1:
 		
             
@@ -174,8 +197,16 @@ class wallfollower():
         '''
         if self.follow_dir == 0:
             
+            '''
             #if self.section['left'] > b and self.section['front'] > a and self.section['right']:
             	#self.change_state(1)
+            if self.section['front2'] > b and self.section['left2'] > b and self.section['right2'] > b:
+            	self.change_state(2)
+            elif self.section['front2'] < b and self.section['left2'] < b and self.section['right2'] < b:
+            	self.change_state(3)
+            #elif self.section['front2'] > b and self.section['left2'] > b and self.section['right2'] > b:
+            	#self.change_state()
+            '''
             if self.state_ == 5:
                 self.change_state(2)
             if self.section['left1'] < b:
@@ -187,7 +218,7 @@ class wallfollower():
                     self.change_state(4)
 
             if self.section['front'] < a and self.section['right'] > b:
-            	self.change_state(1)
+                self.change_state(1)
             elif self.section['left'] <= b and self.section['front1'] > b:# and rospy.get_time() > y
                 self.change_state(2)
                 #self.toggle = True
@@ -204,6 +235,8 @@ class wallfollower():
             	
         
         elif self.follow_dir == 1:  # Algorithm for right wall follower
+
+            '''
             if self.section['right'] > b and self.section['front'] > b:
                 self.change_state(5)
             elif self.section['right'] < b and self.section['front'] > b:
@@ -212,6 +245,33 @@ class wallfollower():
                 self.change_state(1)
             else:
                 rospy.loginfo("follow right wall is not running")
+            '''
+            if self.state_ == 3:
+                self.change_state(2)
+            if self.section['right1'] < b:
+                self.change_state(2)
+            if self.section['right'] < a:
+                self.change_state(4)
+            if self.state_ == 2:
+            	if self.section['left'] < a:
+                    self.change_state(4)
+
+            if self.section['front'] < a and self.section['left'] > b:
+                self.change_state(1)
+            elif self.section['right'] <= b and self.section['front1'] > b:# and rospy.get_time() > y
+                self.change_state(2)
+                #self.toggle = True
+            elif self.section['right1'] <= b and self.section['front1'] <= b:
+                self.change_state(1)
+                time.sleep(0.4) 
+            elif self.section['right'] > b and self.section['front'] > b:
+                self.change_state(5)            
+            elif self.section['right1'] < b and self.section['front1'] > b:
+                self.change_state(3)
+            else:
+                rospy.loginfo("follow left wall is not running")
+            
+        self.pub.publish(velocity)
         '''
         if self.follow_dir == 0:  # Algorithm for left wall follower
             if self.section['left'] > b and self.section['front'] > a:
@@ -387,12 +447,10 @@ class wallfollower():
         
 
         while not rospy.is_shutdown():
-        
-
             #print(self.state_)
             t = rospy.get_time() - self.time_start
             self.dt = t
-            velocity = Twist()
+            velocity = Twist()            
             if self.state_ == 0:
                 velocity = self.find_wall()
             elif self.state_ == 1:
@@ -407,6 +465,7 @@ class wallfollower():
                 velocity = self.move_diag_left()
             elif self.state_ == 6:
                 velocity = self.move_back()
+            #elif self.state_ == 7:
             else:
                 rospy.logerr('Unknown state!')
 
