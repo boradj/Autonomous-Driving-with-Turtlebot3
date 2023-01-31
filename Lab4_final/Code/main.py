@@ -6,10 +6,10 @@ from geometry_msgs.msg import Twist
 import math
 import numpy as np
 from numpy import inf
-from testspot import wallfollower
+from wall_following import wallfollower
 from Astar import AStarPlanner
 from Astar import main
-from pathplanning import Task1
+from pathplanningandpathfollowing import Task1
 from rotate import rotate
 import time
 
