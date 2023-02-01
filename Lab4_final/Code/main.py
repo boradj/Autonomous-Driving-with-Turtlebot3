@@ -6,7 +6,7 @@ from geometry_msgs.msg import Twist
 import math
 import numpy as np
 from numpy import inf
-from wall_following import wallfollower
+from test_spot import wallfollower
 from Astar import AStarPlanner
 from Astar import main
 from pathplanningandpathfollowing import pathplanning
