@@ -41,7 +41,7 @@
    
 ## Lab 4:
    ### Implementing Automatic parking turtlebot
- **Code:-**        [Automatic parking](https://github.com/THD-autonomous-system/team3_deathwing/tree/main/Lab4_final)
+ **Code:-**        [Automatic parking](https://github.com/THD-autonomous-system/team3_deathwing/tree/main/Lab4_final/Code)
  
  **Description:-** [Code structure](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/README.md)
  
