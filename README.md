@@ -39,5 +39,8 @@
    
    **Code:-** [wall following node](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab%203/wall_follower.py)
    
-  
-
+## Lab 4:
+   ### Implementing Automatic parking turtlebot
+ **Code:-** [Automatic parking](https://github.com/THD-autonomous-system/team3_deathwing/tree/main/Lab4_final)
+ **Description:-** [Code structure](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/README.md)
+ **Report:-**[Final_task_report](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/final%20csar.pdf)
