@@ -31,3 +31,7 @@
 
 ##  Map of Real Enviroment 
   <img src="https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/Images/Map%20generated%20by%20Mapping%20algorithm.jpeg" width="500" height="500">
+
+##  Map of A* Star Algorithm
+  <img src="https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/Images/Map%20generated%20by%20Mapping%20algorithm.jpeg" width="500" height="500">
+
