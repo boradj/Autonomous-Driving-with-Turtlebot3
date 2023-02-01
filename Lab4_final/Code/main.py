@@ -9,7 +9,7 @@ from numpy import inf
 from wall_following import wallfollower
 from Astar import AStarPlanner
 from Astar import main
-from pathplanningandpathfollowing import Task1
+from pathplanningandpathfollowing import pathplanning
 from rotate import rotate
 import time
 
@@ -57,7 +57,7 @@ if __name__ == "__main__":
     sy = cur_position.y
     gx = s[0]
     gy = s[1]
-    task1 = Task1()
+    task1 = pathplanning()
     task1.spin(sx, sy, gx, gy)
     velocity = Twist()
     velocity.linear.x = 0.000
@@ -151,7 +151,7 @@ if __name__ == "__main__":
     f = p23[i]
     fgx = f[0]
     fgy = f[1]
-    task1 = Task1()
+    task1 = pathplanning()
     task1.spin(sx, sy, fgx, fgy) 
     velocity = Twist()
     velocity.linear.x = 0.000
