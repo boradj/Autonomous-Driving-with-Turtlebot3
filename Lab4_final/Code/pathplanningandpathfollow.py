@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 from matplotlib.markers import MarkerStyle
 from Astar import AStarPlanner
 show_animation = True
-class Task1:
+class pathplanning:
 
     def __init__(self):
         self.lock = threading.Lock()
