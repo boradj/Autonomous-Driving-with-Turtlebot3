@@ -34,9 +34,9 @@
 
 ##  Map of A* Star Algorithm
  Task 1:
- Path Planning towards starting position     Path Planning towards parking spot                                                             
+ Path Planning towards starting position                                       Path Planning towards parking spot                                                             
     <img src="https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/Images/goingtoinialpositionsfirstttask.png" width="500" height="500"> <img src="https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/Images/finalparkingpathforfirsttask.png" width="500" height="500">
   
  Task 2:
- Path Planning towards starting position     Path Planning towards parking spot
-<img src="https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/Images/goingtoinitialpositionsecondtask.png" width="500" height="500"> <img src="https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/Images/finalparkingpathforsecondtask.png" height="500">
+ Path Planning towards starting position                                        Path Planning towards parking spot
+<img src="https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/Images/goingtoinitialpositionsecondtask.png" width="500" height="500"> <img src="https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/Images/finalparkingpathforsecondtask.png" width="500" height="500">
