@@ -8,10 +8,10 @@
 
 ## 1. Wall follower & finding goal 
  The [wall follower](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/Code/wall_following.py) class will navigate through its surroundings using a wall follower algorithm. The process consists of the following steps: 
-1) First robot will save the starting position coordinate and start moving towards closest wall. 
-2) The robot will locate the closest wall and save the cordinates. 
-3) It will then follow the wall while avoiding any obstacles.
-4) Once the robot has completed a full lap of the environment, it will come to a halt and store the all possible parking spot.
+ - First robot will save the starting position coordinate and start moving towards closest wall. 
+ - The robot will locate the closest wall and save the cordinates. 
+ - It will then follow the wall while avoiding any obstacles.
+ - Once the robot has completed a full lap of the environment, it will come to a halt and store the all possible parking spot.
 
 ## 2.Mapping 
 The [mapping](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab4_final/Code/mapping.py) class will operate simultaneously with the wall follower function, using LIDAR values to gather information about the environment and its positions. 
