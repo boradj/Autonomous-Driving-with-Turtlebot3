@@ -38,7 +38,8 @@
    ### Implementing walls following robot 
    
    **Code:-** [wall following node](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab%203/wall_follower.py)
-   [Mapping on house map](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab%203/Images/mappinghouse.png)
+   
+   - [Mapping on house map](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab%203/Images/mappinghouse.png)
    
 ## Lab 4:
    ### Implementing Automatic parking turtlebot
