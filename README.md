@@ -39,7 +39,7 @@
    
    **Code:-** [wall following node](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab%203/wall_follower.py)
    
-              [mapping node](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab%203/Code/laser2.py)
+   [mapping node](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab%203/Code/laser2.py)
    
    - [Mapping on house map](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab%203/Images/mappinghouse.png)
    
