@@ -2,4 +2,4 @@
 
 
 ## Map of Gazebo house
-![Map](https://github.com/THD-autonomous-system/team3_deathwing/blob/main/Lab%203/Images/mappinghouse.png)
+![Map](https://github.com/boradj/Turtlebot3/blob/main/Lab%203/Images/mappinghouse.png)
