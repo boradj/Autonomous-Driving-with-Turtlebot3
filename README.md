@@ -27,7 +27,7 @@
  - It utilize a PI controller to guide the robot towards the destination along this path.
 
 ## Project implementation map
-<img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Real%20Enviroment%20Map%202.jpeg" width="450" height="450"> <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Real%20enviroment%20Map.jpeg" width="450" height="450">
+<img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Real%20Enviroment%20Map%202.jpeg" width="440" height="440"> <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Real%20enviroment%20Map.jpeg" width="450" height="450">
 
 ##  Map of Real Enviroment 
   <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Map%20generated%20by%20Mapping%20algorithm.jpeg" width="500" height="500">
