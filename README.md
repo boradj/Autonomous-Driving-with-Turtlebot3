@@ -27,18 +27,18 @@
  - It utilize a PI controller to guide the robot towards the destination along this path.
 
 ## Project implementation map
-<img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Real%20Enviroment%20Map%202.jpeg" width="415" height="415"> <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Real%20enviroment%20Map.jpeg" width="415" height="415">
+<img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Real%20Enviroment%20Map%202.jpeg" width="410" height="410"> <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Real%20enviroment%20Map.jpeg" width="410" height="410">
 
 ##  Map of Real Enviroment 
-  <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Map%20generated%20by%20Mapping%20algorithm.jpeg" width="500" height="500">
+  <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Map%20generated%20by%20Mapping%20algorithm.jpeg" width="410" height="410">
 
 ##  Map of A* Star Algorithm
  Task 1:
  Path Planning towards starting position   and Path Planning towards parking spot                                         
  
- <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/goingtoinialpositionsfirstttask.png" width="500" height="500"> <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/finalparkingpathforfirsttask.png" width="500" height="500">
+ <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/goingtoinialpositionsfirstttask.png" width="410" height="410"> <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/finalparkingpathforfirsttask.png" width="410" height="410">
   
  Task 2:
  Path Planning towards starting position  and Path Planning towards parking spot
  
-<img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/goingtoinitialpositionsecondtask.png" width="500" height="500"> <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/finalparkingpathforsecondtask.png" width="500" height="500">
+<img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/goingtoinitialpositionsecondtask.png" width="410" height="410"> <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/finalparkingpathforsecondtask.png" width="410" height="410">
