@@ -1,9 +1,6 @@
 # Autonomous-Driving-with-Turtlebot3
 
-
-## Lab 4:
-
-### Final project- TurtleBot Path-finding and Automatic Parking
+## Final project- TurtleBot Path-finding and Automatic Parking
 
 # Code structure
 
