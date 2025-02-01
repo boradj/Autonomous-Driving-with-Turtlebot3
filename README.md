@@ -34,7 +34,7 @@
  Task 1:
  Path Planning towards starting position   and Path Planning towards parking spot                                         
  
- <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/goingtoinialpositionsfirstttask.png" width="400" height="405"> <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/finalparkingpathforfirsttask.png" width="400" height="405">
+ <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/goingtoinialpositionsfirstttask.png" width="350" height="350"> <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/finalparkingpathforfirsttask.png" width="350" height="350">
   
  Task 2:
  Path Planning towards starting position  and Path Planning towards parking spot
