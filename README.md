@@ -25,10 +25,10 @@
  - It utilize a PI controller to guide the robot towards the destination along this path.
 
 ## Project implementation map
-<img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Real%20Enviroment%20Map%202.jpeg" width="400" height="410"> <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Real%20enviroment%20Map.jpeg" width="400" height="410">
+<img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Real%20Enviroment%20Map%202.jpeg" width="300" height="300"> <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Real%20enviroment%20Map.jpeg" width="300" height="300">
 
 ##  Map of Real Enviroment 
-  <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Map%20generated%20by%20Mapping%20algorithm.jpeg" width="300" height="300">
+  <img src="https://github.com/boradj/Turtlebot3/blob/main/Lab4_final/Images/Map%20generated%20by%20Mapping%20algorithm.jpeg" width="400" height="410">
 
 ##  Map of A* Star Algorithm
  Task 1:
